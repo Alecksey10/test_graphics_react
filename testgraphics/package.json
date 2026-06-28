@@ -2,7 +2,10 @@
   "name": "testgraphics",
   "private": true,
   "type": "module",
+  "homepage": "https://alecksey10.github.io/test_graphics_react",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "react-router build",
     "dev": "react-router dev",
     "start": "react-router-serve ./build/server/index.js",
@@ -27,6 +30,7 @@
     "@types/node": "^22",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
+    "gh-pages": "^6.3.0",
     "tailwindcss": "^4.2.2",
     "typescript": "^5.9.3",
     "vite": "^8.0.3"
