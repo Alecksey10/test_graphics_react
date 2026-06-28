@@ -13,6 +13,7 @@ export default function Home() {
   return <>
   <button>Тестовая кнопка</button>
     <div style={{ width: '100vw', height: '100vh' }}>
+        <Link to={{ pathname: "/part1/try1" }} target="_blank" style={{color:"blue"}}> Вариант 1  </Link>
       <Canvas>
         <ambientLight intensity={Math.PI / 2} />
         <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} decay={0} intensity={Math.PI} />
@@ -28,6 +29,7 @@ export default function Home() {
 import { createRoot } from 'react-dom/client'
 import React, { useRef, useState } from 'react'
 import { Canvas, useFrame } from '@react-three/fiber'
+import { Link } from "react-router";
 
 function Box(props) {
   // This reference gives us direct access to the THREE.Mesh object
