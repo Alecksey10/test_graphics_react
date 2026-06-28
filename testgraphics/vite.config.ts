@@ -7,7 +7,7 @@ export default defineConfig({
   resolve: {
     tsconfigPaths: true,
   },
-  base: "/", // эту настройку вы уже используете
+  base: "/test_graphics_react/", // эту настройку вы уже используете
   server: {
     host: '0.0.0.0', // <-- Добавьте эту строку
     port: 27777,    // порт можно указать явно, но это необязательно
