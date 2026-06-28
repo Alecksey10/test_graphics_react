@@ -1,6 +1,6 @@
 import { PassThrough } from "node:stream";
 import { createReadableStreamFromReadable } from "@react-router/node";
-import { Links, Meta, Outlet, Scripts, ScrollRestoration, ServerRouter, UNSAFE_withComponentProps, UNSAFE_withErrorBoundaryProps, isRouteErrorResponse } from "react-router";
+import { Link, Links, Meta, Outlet, Scripts, ScrollRestoration, ServerRouter, UNSAFE_withComponentProps, UNSAFE_withErrorBoundaryProps, isRouteErrorResponse } from "react-router";
 import { isbot } from "isbot";
 import { renderToPipeableStream } from "react-dom/server";
 import { Fragment, jsx, jsxs } from "react/jsx-runtime";
@@ -141,12 +141,17 @@ function meta({}) {
 	}];
 }
 var home_default = UNSAFE_withComponentProps(function Home() {
-	return /* @__PURE__ */ jsxs(Fragment, { children: [/* @__PURE__ */ jsx("button", { children: "Тестовая кнопка" }), /* @__PURE__ */ jsx("div", {
+	return /* @__PURE__ */ jsxs(Fragment, { children: [/* @__PURE__ */ jsx("button", { children: "Тестовая кнопка" }), /* @__PURE__ */ jsxs("div", {
 		style: {
 			width: "100vw",
 			height: "100vh"
 		},
-		children: /* @__PURE__ */ jsxs(Canvas, { children: [
+		children: [/* @__PURE__ */ jsx(Link, {
+			to: { pathname: "/part1/try1" },
+			target: "_blank",
+			style: { color: "blue" },
+			children: " Вариант 1  "
+		}), /* @__PURE__ */ jsxs(Canvas, { children: [
 			/* @__PURE__ */ jsx("ambientLight", { intensity: Math.PI / 2 }),
 			/* @__PURE__ */ jsx("spotLight", {
 				position: [
@@ -178,7 +183,7 @@ var home_default = UNSAFE_withComponentProps(function Home() {
 				0,
 				0
 			] })
-		] })
+		] })]
 	})] });
 });
 function Box(props) {
@@ -989,12 +994,12 @@ var part1try1_default = UNSAFE_withComponentProps(function Home() {
 //#region \0virtual:react-router/server-manifest
 var server_manifest_default = {
 	"entry": {
-		"module": "/test/assets/entry.client-BM9UU_lw.js",
+		"module": "/assets/entry.client-Bj3rDKTC.js",
 		"imports": [
-			"/test/assets/jsx-runtime-DZLcUPaz.js",
-			"/test/assets/react-dom-DD8rQUJ9.js",
-			"/test/assets/client-Z3JHRcXb.js",
-			"/test/assets/components-BOqW7X-h.js"
+			"/assets/jsx-runtime-DZLcUPaz.js",
+			"/assets/react-dom-DD8rQUJ9.js",
+			"/assets/client-Z3JHRcXb.js",
+			"/assets/components-DIUaiq-l.js"
 		],
 		"css": []
 	},
@@ -1012,14 +1017,15 @@ var server_manifest_default = {
 			"hasClientMiddleware": false,
 			"hasDefaultExport": true,
 			"hasErrorBoundary": true,
-			"module": "/test/assets/root-DKkWvj43.js",
+			"module": "/assets/root-B2_TXMhT.js",
 			"imports": [
-				"/test/assets/jsx-runtime-DZLcUPaz.js",
-				"/test/assets/react-dom-DD8rQUJ9.js",
-				"/test/assets/client-Z3JHRcXb.js",
-				"/test/assets/components-BOqW7X-h.js"
+				"/assets/jsx-runtime-DZLcUPaz.js",
+				"/assets/react-dom-DD8rQUJ9.js",
+				"/assets/client-Z3JHRcXb.js",
+				"/assets/components-DIUaiq-l.js",
+				"/assets/lib-ncCQENlx.js"
 			],
-			"css": ["/test/assets/root-Cy8yAWQO.css"],
+			"css": ["/assets/root-Cy8yAWQO.css"],
 			"clientActionModule": void 0,
 			"clientLoaderModule": void 0,
 			"clientMiddlewareModule": void 0,
@@ -1038,12 +1044,14 @@ var server_manifest_default = {
 			"hasClientMiddleware": false,
 			"hasDefaultExport": true,
 			"hasErrorBoundary": false,
-			"module": "/test/assets/home-DRHZoY5-.js",
+			"module": "/assets/home-99go10iW.js",
 			"imports": [
-				"/test/assets/jsx-runtime-DZLcUPaz.js",
-				"/test/assets/client-Z3JHRcXb.js",
-				"/test/assets/react-three-fiber.esm-BP9d_kB-.js",
-				"/test/assets/react-dom-DD8rQUJ9.js"
+				"/assets/jsx-runtime-DZLcUPaz.js",
+				"/assets/client-Z3JHRcXb.js",
+				"/assets/lib-ncCQENlx.js",
+				"/assets/react-three-fiber.esm-BP9d_kB-.js",
+				"/assets/react-dom-DD8rQUJ9.js",
+				"/assets/components-DIUaiq-l.js"
 			],
 			"css": [],
 			"clientActionModule": void 0,
@@ -1054,7 +1062,7 @@ var server_manifest_default = {
 		"routes/part1try1": {
 			"id": "routes/part1try1",
 			"parentId": "root",
-			"path": "/test/part1/try1",
+			"path": "/part1/try1",
 			"index": void 0,
 			"caseSensitive": void 0,
 			"hasAction": false,
@@ -1064,21 +1072,21 @@ var server_manifest_default = {
 			"hasClientMiddleware": false,
 			"hasDefaultExport": true,
 			"hasErrorBoundary": false,
-			"module": "/test/assets/part1try1-Br6gGMGP.js",
+			"module": "/assets/part1try1-Br6gGMGP.js",
 			"imports": [
-				"/test/assets/jsx-runtime-DZLcUPaz.js",
-				"/test/assets/react-dom-DD8rQUJ9.js",
-				"/test/assets/react-three-fiber.esm-BP9d_kB-.js"
+				"/assets/jsx-runtime-DZLcUPaz.js",
+				"/assets/react-dom-DD8rQUJ9.js",
+				"/assets/react-three-fiber.esm-BP9d_kB-.js"
 			],
-			"css": ["/test/assets/part1try1-BQclVesS.css"],
+			"css": ["/assets/part1try1-BQclVesS.css"],
 			"clientActionModule": void 0,
 			"clientLoaderModule": void 0,
 			"clientMiddlewareModule": void 0,
 			"hydrateFallbackModule": void 0
 		}
 	},
-	"url": "/test/assets/manifest-eca78e38.js",
-	"version": "eca78e38",
+	"url": "/assets/manifest-0f7cd7dd.js",
+	"version": "0f7cd7dd",
 	"sri": void 0
 };
 //#endregion
@@ -1093,7 +1101,7 @@ var routeDiscovery = {
 	"mode": "lazy",
 	"manifestPath": "/__manifest"
 };
-var publicPath = "/test/";
+var publicPath = "/";
 var entry = { module: entry_server_node_exports };
 var routes = {
 	"root": {
@@ -1115,7 +1123,7 @@ var routes = {
 	"routes/part1try1": {
 		id: "routes/part1try1",
 		parentId: "root",
-		path: "/test/part1/try1",
+		path: "/part1/try1",
 		index: void 0,
 		caseSensitive: void 0,
 		module: part1try1_exports
